@@ -1,0 +1,58 @@
+body {
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#choice,
+.choice-container,
+#attack,
+#defence,
+#my-choice,
+.my-choice-container,
+#my-secondChoice {
+  width: 240px;
+  height: 240px;
+  margin: 0 auto;
+}
+
+#timeBox {
+  font-size: 2rem;
+}
+
+#choices,
+#second,
+#third,
+#fourth {
+  width: 400px;
+  height: 80px;
+  margin: 0 auto;
+  display: flex;
+}
+
+#part1-btn,
+#part2-btn {
+  display: flex;
+}
+
+#choices > .part1-btn > img,
+#choices > .part2-btn > img,
+#second > .part1-btn > img,
+#second > .part2-btn > img,
+#third > .part1-btn > img,
+#third > .part2-btn > img,
+#fourth > .part1-btn > img,
+#fourth > .part2-btn > img {
+  width: 80px;
+  height: 80px;
+}
+
+.result {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}

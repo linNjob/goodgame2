@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/index.css" />
+  </head>
+  <body>
+    <!-- 倒數 -->
+    <div id="timeBox"></div>
+    <!-- 猜拳 -->
+    <div id="rpsContainer">
+      <section id="rpsWrapper">
+        <img id="choice" draggable="false" />
+        <br />
+        <h1>殭屍的殭屍的殭屍猜</h1>
+        <div class="result">
+          <h1 id="result">請出拳</h1>
+          <img id="my-choice" draggable="false" />
+          <h1 id="timer"></h1>
+        </div>
+        <div id="choices">
+          <div id="part1-btn">
+            <img id="r" src="./r.png" draggable="false" alt="請出拳" />
+            <img id="p" src="./p.png" draggable="false" alt="請出拳" />
+            <img id="s" src="./s.png" draggable="false" alt="請出拳" />
+          </div>
+          <div id="part2-btn">
+            <img id="a" src="./a.png" draggable="false" />
+            <img id="d" src="./d.png" draggable="false" />
+          </div>
+        </div>
+      </section>
+      <!-- 猜拳勝利後到這裡 -->
+      <section id="rpsUserWins" style="display: none">
+        <h1>hhihihihi</h1>
+        <img id="attack" draggable="false" />
+        <br />
+        <h1>殭屍的咚咚 殭屍猜</h1>
+        <div class="result">
+          <h1 id="finalResult"></h1>
+          <img id="myChoice" draggable="false" />
+          <h1 id="finalTimer"></h1>
+        </div>
+        <div id="second">
+          <div id="part1-btn">
+            <img id="r1" src="./r.png" draggable="false" />
+            <img id="p1" src="./p.png" draggable="false" />
+            <img id="s1" src="./s.png" draggable="false" />
+          </div>
+          <div id="part2-btn">
+            <img id="a1" src="./a.png" draggable="false" />
+            <img id="d1" src="./d.png" draggable="false" />
+          </div>
+        </div>
+        <h1 id="myScore">0</h1>
+      </section>
+      <!-- 猜拳失敗後到這裡 -->
+      <section id="rpsUserLoses" style="display: none">
+        <h1>nononono</h1>
+        <img id="defence" draggable="false" />
+        <br />
+        <h1>殭屍的咚咚 殭屍猜</h1>
+        <div class="result">
+          <h1 id="finalResultSecond"></h1>
+          <img id="mySecondChoice" draggable="false" />
+          <h1 id="finalTimerSecond"></h1>
+        </div>
+        <div id="third">
+          <div id="part1-btn">
+            <img id="r2" src="./r.png" draggable="false" />
+            <img id="p2" src="./p.png" draggable="false" />
+            <img id="s2" src="./s.png" draggable="false" />
+          </div>
+          <div id="part2-btn">
+            <img id="a2" src="./a.png" draggable="false" />
+            <img id="d2" src="./d.png" draggable="false" />
+          </div>
+        </div>
+        <h1 id="loseMyScore">0</h1>
+      </section>
+      <!-- 猜拳平手後到這裡 -->
+      <section id="rpsUserDraw" style="display: none">
+        <h1>drawdrawdrawdraw</h1>
+        <img id="draw" draggable="false" src="./draw.png" />
+        <br />
+        <h1>殭屍的咚咚 殭屍猜</h1>
+        <div class="result">
+          <h1 id="finalResultDraw"></h1>
+          <img id="DrawChoice" draggable="false" src="./draw.png" />
+          <h1 id="finalTimerDraw"></h1>
+        </div>
+        <div id="fourth">
+          <div></div>
+          <div id="part1-btn">
+            <img id="r3" src="./r.png" draggable="false" />
+            <img id="p3" src="./p.png" draggable="false" />
+            <img id="s3" src="./s.png" draggable="false" />
+          </div>
+          <div id="part2-btn">
+            <img id="a3" src="./a.png" draggable="false" />
+            <img id="d3" src="./d.png" draggable="false" />
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="/index.js"></script>
+  </body>
+</html>
