@@ -4,8 +4,6 @@ window.onload = function () {
   clear();
 };
 
-
-
 // timer 倒數
 
 var time = document.getElementById("timeBox");
@@ -39,26 +37,23 @@ var firstTime;
 var isPaused = false;
 
 // 提示即將轉場
-var show = document.getElementById("show")
-var isPaused = false;
-
-function showing () {
-  setTimeout("show.style.visibility = 'visible' ",2000);
-  setTimeout("show.style.visibility = 'hidden' ",5000);
-}
-
+var show = document.getElementById("show");
+var isPaused = true;
 
 function firstTimerDown() {
   var firstTime = 5;
   var firstTimerMinus = setInterval(() => {
-    if (rps.style.display == "block" && firstTime >= 0 && !isPaused) {
+    if (rps.style.display == "block" && firstTime >= 0 && isPaused) {
       firstTimer.innerText = "出拳時間還有" + firstTime + "秒";
       firstTime--;
       // 點擊照片後暫停計時
 
       part1Btn.addEventListener("click", function () {
-        showing();
-        clearInterval(firstTimerMinus);
+        // clearInterval(firstTimerMinus);
+        isPaused = false;
+        if (isPaused == false) {
+          console.log("hello");
+        }
       });
       if (firstTime <= -1) {
         result.innerHTML = "失敗 超時了";
@@ -71,9 +66,6 @@ function firstTimerDown() {
     }
   }, 1000);
 }
-
-
-
 
 function rpsPart1() {
   // 進畫面開始倒數
