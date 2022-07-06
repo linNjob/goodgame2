@@ -1,7 +1,8 @@
 window.onload = function () {
   timeDown();
   rpsPart1();
-  clear();
+  // clear();
+  
 };
 
 // timer 倒數
@@ -34,7 +35,6 @@ var result = document.getElementById("result");
 var firstTimer = document.getElementById("timer");
 var part1Btn = document.getElementById("part1-btn");
 var firstTime;
-var isPaused = false;
 
 // 提示即將轉場
 var show = document.getElementById("show");
@@ -49,22 +49,22 @@ function firstTimerDown() {
       // 點擊照片後暫停計時
 
       part1Btn.addEventListener("click", function () {
-        // clearInterval(firstTimerMinus);
         isPaused = false;
-        if (isPaused == false) {
-          console.log("hello");
-        }
+        console.log('isPaused1: ' + isPaused)
+        setTimeout(() => {
+          isPaused = true;
+          console.log('isPaused2: ' + isPaused)
+        }, 2000);
       });
       if (firstTime <= -1) {
         result.innerHTML = "失敗 超時了";
         clearInterval(firstTimerMinus);
-
         // 超時需停止點擊事件
-
         document.getElementById("part1-btn").style.pointerEvents = "none";
       }
     }
   }, 1000);
+  firstTime = 5;
 }
 
 function rpsPart1() {
@@ -127,12 +127,14 @@ function rpsPart1() {
       }
       // 都出完後需停止點擊事件
       document.getElementById("part1-btn").style.pointerEvents = "none";
+      // clear
+      // 回到某一個場景
     });
 }
 
 function clear() {
   // 如果不在第一關 則清除第一關資料
-  setTimeout(() => {
+  // setTimeout(() => {
     document.getElementById("r").src = "r.png";
     document.getElementById("p").src = "p.png";
     document.getElementById("s").src = "s.png";
@@ -141,5 +143,5 @@ function clear() {
     document.getElementById("part1-btn").style.pointerEvents = "auto";
     document.getElementById("result").innerHTML = "";
     firstTimerDown();
-  }, 13000);
+  // }, 13000);
 }
